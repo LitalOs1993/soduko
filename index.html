@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoko project</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+    <!-- background animation link-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <!--The head of our page -->
+  <header>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="header">
+  
+    <h1>Soduko</h1>
+    <!-- for storing the next elements and arrange them -->
+    <div id="setup-game">
+      <!-- for the diffuclty in our game -->
+      <div id="diff">
+        <p id="cD">Choose Difficulty:</p>
+        <!-- radio button for the diffuclty, easy is gonna be checked cause its the default-->
+        <label
+          ><input
+            id="diff-1"
+            type="radio"
+            name="diff"
+            value="easy"
+            checked
+          />Easy</label
+        >
+        <label
+          ><input
+            id="diff-2"
+            type="radio"
+            name="diff"
+            value="medium"
+          />Medium</label
+        >
+        <label
+          ><input
+            id="diff-3"
+            type="radio"
+            name="diff"
+            value="hard"
+          />Hard</label
+        >
+      </div>
+      <!-- how much time we want our game to run -->
+      <div id="time">
+        <p>Choose Time:</p>
+        <!-- radio button for the time, three min is gonna be checked cause its the default-->
+        <label
+          ><input id="time-1" type="radio" name="time" value="three" checked />3
+          min</label
+        >
+        <label
+          ><input id="time-2" type="radio" name="time" value="five" />5
+          min</label
+        >
+        <label
+          ><input id="time-3" type="radio" name="time" value="ten" />10
+          min</label
+        >
+      </div>
+    </div>
+  </header>
+  <!-- The body of our page -->
+  <body>
+  </div>
+  <div id='btns'>
+    <button id="start-btn" onclick="startGame()">Start new game!</button>
+    <button id="solve-btn" onclick="createSolvedBoard()">Solve</button>
+  </div>
+ 
+</div>
+   <!-- main of login window -->
+    <main id="loginWindow">
+      <h1 id="login-header">Login</h1>
+      <!-- set a div for the error messege -->
+      <div id="login-error-msg-holder">
+        <p id="login-error-msg">
+          Invalid user name
+          <span id="error-msg-second-line">and/or password</span>
+        </p>
+      </div>
+      <!-- login format -->
+      <form id="login-form">
+        <!-- for the Username -->
+        Username :&nbsp;
+        <input 
+          type="text"
+          name="username"
+          id="username-field"
+          class="login-form-field"
+          placeholder="Username"
+        />
+        <br />
+        <!-- for the password -->
+        Password :&nbsp;
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="login-form-field"
+          placeholder="Password"
+        />
+        <br /><br />
+        <!-- the login button -->
+        <button type="sumbit" value="Login" id="login-form-sumbit">Login</button>
+        <br />
+      </form>
+    </main>
+    <!--end of login main -->
+    <!-- div for our welcome window -->
+    <div id="welcome" class="hidden">
+        <h1>Welcome!</h1>
+        <!-- <h3>The best sudoko game </h3>
+        <h3>Made by Netanel, Reuvn & Lital </h3> -->
+        <p>Hi abcd<span id="spD">,</span></p>
+        <p>Enjoy our sudoko game :)</p>
+
+         <!-- button to start a new game -->
+         <button id="go-btn" onclick="goToGame()">Start a game!</button>
+    </div>
+    <!-- statistics - gonna store the timer and the lives remaining -->
+    <div id="stats" class="hidden">
+      <!-- the p's id is for js use -->
+      <span id="lives">Lives</span>
+      <span id="timer"></span>
+    </div>
+    <!-- game div will contain our soduko board and the individual tiles -->
+    <div id="game">
+      <!-- board & numbers are gonna be filled with js  -->
+      <div id="board"></div>
+      <!-- number-container defualt is hidden - Defined in CSS(won't work without it) -->
+      <div id="number-container" class="hidden">
+        <!-- create the tiles on our board -->
+        <p id="one">1</p>
+        <p id="two">2</p>
+        <p id="three">3</p>
+        <p id="four">4</p>
+        <p id="five">5</p>
+        <p id="six">6</p>
+        <p id="seven">7</p>
+        <p id="eight">8</p>
+        <p id="nine">9</p>
+      </div>
+    </div>
+    <!-- div for our loose window   -->
+    <div id="youLose" class="hidden">
+      <span id="gameOver"> <p>Game over !</p></span>
+      <p id="lWindow"></p>
+      <p id="tR"></p>
+      <button id="lw-btn" onclick="startGame()">Play Again!</button>
+    </div>
+    <!-- div for our win window   -->
+    <div id="youWin" class="hidden">
+      <span id="youW"> <p>You win!</p></span>
+      <p id="wWindow"></p>
+      <p id="wR"></p>
+      <button id="lw-btn" onclick="startGame()">Play Again!</button>
+    </div>
+  </body>
+  <!-- The bottom of our page -->
+ 
+  <footer>
+    <!-- creators -->
+    <p>©Made By Netanel, Reuvn & Lital</p>
+  </footer>
+</html>

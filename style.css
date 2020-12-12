@@ -1,0 +1,2139 @@
+/* in order to hide elements in our page */
+.hidden {
+  display: none;
+}
+/* for all headers in our page */
+h1 {
+  font-size: 70px;
+  text-shadow: 5px 5px 15px rgb(0, 140, 255);
+}
+#spD {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#password-field {
+  position: relative;
+  left: 2px;
+}
+/* for all the buttons in our page */
+button {
+  margin-top: 20px;
+  height: 40px;
+  background-image: linear-gradient(rgb(0, 61, 82), rgb(37, 0, 107));
+  outline: none;
+  border: 2px solid black;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  justify-self: center;
+}
+button:hover {
+  height: 40px;
+  background-image: linear-gradient(rgb(0, 191, 255), rgb(37, 0, 107));
+  outline: none;
+  border: 2px solid black;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#btns {
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  margin-right: -40px;
+}
+
+#start-btn,
+#solve-btn {
+  width: 180px;
+  margin-right: 10px;
+}
+/* header css start*/
+header {
+  text-align: center;
+  font-size: 25px;
+}
+/* main div of diff, time & btn */
+#setup-game {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+/* all p's in setup-game will get this css */
+#setup-game p {
+  font-size: 23px;
+}
+/* all elemens in setup-game will get this css */
+#setup-game > * {
+  margin-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+}
+/* header css end*/
+
+/* body css start*/
+/* login main css */
+#loginWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 430px;
+  background-color: rgb(24, 9, 109, 0.92);
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 2px solid black;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+/* inputs in loginWindow will get this css */
+#loginWindow input {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+/* css for error msg */
+#login-error-msg-holder {
+  color: red;
+}
+/* login main css end */
+/* css for our welcome window */
+#welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 450px;
+  background-color: rgb(24, 9, 109, 0.92);
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+/* css for time and diff */
+#time p,
+#diff p {
+  font-size: 22px;
+}
+#time,
+#diff {
+  font-size: 23px;
+  padding: 15px;
+}
+/* css for lives and time */
+#stats {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+#stats span {
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+/* css for main div of our board */
+#game {
+  display: flex;
+  justify-content: center;
+}
+/* css of board */
+#board {
+  padding-top: 10px;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 600px;
+  height: 600px;
+
+  text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  color: black;
+}
+/* in js file */
+.tile {
+  border: 2px solid rgb(0, 1, 66);
+  opacity: 0.7;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin: 0px;
+  vertical-align: middle;
+  font-size: 55px;
+  padding: 1px;
+  box-shadow: 5px 5px 5px black;
+}
+p.selected {
+  background-color: rgb(24, 9, 109);
+  opacity: 0.7;
+}
+p.incorrect {
+  color: rgb(255, 0, 0);
+}
+.addB {
+  background-color: rgb(250, 250, 250, 0.9);
+}
+.rightBoarder {
+  border-right: 5px solid black;
+}
+.bottomBoarder {
+  border-bottom: 7px solid black;
+}
+/* in js file end */
+/* css of board end */
+/* css of our line of numbers */
+#number-container > p {
+  border: 2px solid rgb(0, 1, 66);
+  width: 60px;
+  height: 60px;
+  font-size: 53px;
+  margin-left: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 55px;
+  text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  box-shadow: 5px 5px 5px black;
+  color: black;
+  opacity: 0.8;
+}
+/* css for loose */
+#youLose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: rgb(24, 9, 109, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  color: red;
+}
+/* animation for loose */
+@keyframes gameOver {
+  from {
+    color: red;
+  }
+  to {
+    color: white;
+  }
+}
+#gameOver {
+  font-size: 50px;
+  animation-name: gameOver;
+  animation: gameOver 0.6s infinite;
+}
+/* css for loose end*/
+/* css for win */
+#youWin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: rgb(24, 9, 109, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  color: green;
+}
+/* animation for win */
+@keyframes youW {
+  from {
+    color: green;
+  }
+  to {
+    color: white;
+  }
+}
+#youW {
+  font-size: 50px;
+  animation-name: youW;
+  animation: youW 0.6s infinite;
+}
+/* css for win end*/
+/* body css end*/
+
+/* footer css */
+footer {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: -60px;
+}
+/* footer css end */
+
+/* background animation start*/
+html {
+  height: inherit;
+  width: inherit;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 0%);
+  background-image: url(background.jpg);
+  background-size: inherit;
+  background-repeat: no-repeat;
+  color: blanchedalmond;
+  font-family: "Do Hyeon", sans-serif;
+  text-shadow: 2px 2px 2px rgb(0, 46, 44);
+}
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 389px 553px #fff, 1190px 211px #fff, 425px 1678px #fff,
+    149px 1840px #fff, 1129px 577px #fff, 1428px 361px #fff, 696px 574px #fff,
+    15px 1665px #fff, 1616px 664px #fff, 426px 1927px #fff, 807px 1382px #fff,
+    888px 1511px #fff, 535px 1332px #fff, 183px 784px #fff, 327px 102px #fff,
+    1613px 546px #fff, 956px 1195px #fff, 1661px 1345px #fff, 1143px 521px #fff,
+    1465px 1900px #fff, 248px 270px #fff, 1410px 1655px #fff, 936px 205px #fff,
+    1485px 32px #fff, 675px 407px #fff, 827px 999px #fff, 1582px 1576px #fff,
+    419px 1330px #fff, 1888px 1561px #fff, 378px 633px #fff, 450px 192px #fff,
+    525px 1480px #fff, 858px 1641px #fff, 378px 108px #fff, 536px 900px #fff,
+    1178px 693px #fff, 551px 35px #fff, 3px 1352px #fff, 590px 245px #fff,
+    186px 1398px #fff, 1567px 1013px #fff, 1807px 1976px #fff,
+    1262px 1989px #fff, 886px 426px #fff, 546px 1316px #fff, 694px 1840px #fff,
+    281px 774px #fff, 542px 873px #fff, 455px 80px #fff, 1737px 690px #fff,
+    579px 964px #fff, 217px 269px #fff, 821px 1225px #fff, 1935px 492px #fff,
+    1802px 173px #fff, 620px 1906px #fff, 882px 1358px #fff, 1075px 361px #fff,
+    1851px 1584px #fff, 1073px 1661px #fff, 1511px 313px #fff, 1494px 212px #fff,
+    263px 380px #fff, 363px 917px #fff, 244px 1670px #fff, 396px 1734px #fff,
+    1650px 610px #fff, 1679px 370px #fff, 1812px 1187px #fff, 587px 1591px #fff,
+    405px 219px #fff, 711px 3px #fff, 348px 1045px #fff, 176px 630px #fff,
+    340px 1297px #fff, 1014px 1521px #fff, 1495px 569px #fff, 994px 234px #fff,
+    1911px 1706px #fff, 1043px 1086px #fff, 2px 153px #fff, 826px 888px #fff,
+    1837px 999px #fff, 86px 1336px #fff, 140px 938px #fff, 348px 980px #fff,
+    620px 1740px #fff, 725px 595px #fff, 1336px 641px #fff, 54px 393px #fff,
+    364px 1579px #fff, 782px 774px #fff, 497px 673px #fff, 1164px 468px #fff,
+    860px 162px #fff, 828px 1192px #fff, 1806px 674px #fff, 1329px 507px #fff,
+    193px 292px #fff, 1670px 957px #fff, 1547px 334px #fff, 1750px 1748px #fff,
+    971px 514px #fff, 1212px 622px #fff, 596px 1102px #fff, 272px 1410px #fff,
+    1759px 899px #fff, 500px 82px #fff, 1753px 1693px #fff, 25px 585px #fff,
+    139px 1669px #fff, 1641px 27px #fff, 1331px 720px #fff, 441px 660px #fff,
+    202px 1785px #fff, 1011px 1519px #fff, 1555px 623px #fff, 1470px 543px #fff,
+    915px 1253px #fff, 1244px 1814px #fff, 360px 169px #fff, 207px 641px #fff,
+    800px 1753px #fff, 1577px 1826px #fff, 1755px 1205px #fff, 1423px 403px #fff,
+    389px 587px #fff, 344px 37px #fff, 223px 615px #fff, 831px 1901px #fff,
+    945px 1762px #fff, 1335px 1057px #fff, 1321px 1305px #fff,
+    1229px 1507px #fff, 699px 639px #fff, 1307px 785px #fff, 1306px 936px #fff,
+    854px 1469px #fff, 1756px 1688px #fff, 657px 790px #fff, 1704px 585px #fff,
+    1863px 461px #fff, 1387px 813px #fff, 258px 1845px #fff, 1726px 703px #fff,
+    185px 1344px #fff, 1246px 1842px #fff, 1477px 317px #fff, 718px 164px #fff,
+    608px 441px #fff, 1593px 1247px #fff, 590px 516px #fff, 1316px 1080px #fff,
+    1115px 1531px #fff, 902px 1673px #fff, 1401px 46px #fff, 1946px 1438px #fff,
+    728px 1396px #fff, 1923px 1663px #fff, 1573px 1697px #fff, 1421px 193px #fff,
+    1589px 53px #fff, 124px 1141px #fff, 1022px 1420px #fff, 1101px 921px #fff,
+    1775px 1146px #fff, 1667px 846px #fff, 753px 1457px #fff, 1015px 290px #fff,
+    1865px 1275px #fff, 1854px 1707px #fff, 1843px 984px #fff, 407px 1695px #fff,
+    1868px 1124px #fff, 1347px 621px #fff, 721px 1082px #fff, 1496px 977px #fff,
+    1852px 1504px #fff, 1818px 560px #fff, 365px 410px #fff, 1649px 364px #fff,
+    169px 1514px #fff, 1916px 626px #fff, 1996px 1230px #fff, 1800px 1275px #fff,
+    1210px 966px #fff, 1772px 1519px #fff, 209px 736px #fff, 593px 155px #fff,
+    1472px 62px #fff, 893px 120px #fff, 1248px 911px #fff, 1679px 569px #fff,
+    1948px 368px #fff, 266px 1671px #fff, 171px 912px #fff, 1706px 1857px #fff,
+    202px 109px #fff, 251px 309px #fff, 1659px 125px #fff, 309px 1649px #fff,
+    1011px 586px #fff, 1738px 1031px #fff, 192px 1417px #fff, 826px 1494px #fff,
+    806px 140px #fff, 1059px 314px #fff, 1167px 1093px #fff, 1736px 1002px #fff,
+    929px 953px #fff, 1624px 95px #fff, 965px 1523px #fff, 631px 1273px #fff,
+    629px 288px #fff, 1036px 841px #fff, 148px 256px #fff, 1435px 456px #fff,
+    1287px 1825px #fff, 561px 170px #fff, 355px 1217px #fff, 587px 1401px #fff,
+    1818px 1127px #fff, 535px 1085px #fff, 1373px 1154px #fff, 1990px 234px #fff,
+    1232px 1351px #fff, 591px 841px #fff, 1675px 390px #fff, 1170px 842px #fff,
+    931px 706px #fff, 1091px 1954px #fff, 833px 499px #fff, 1026px 379px #fff,
+    1686px 1247px #fff, 629px 535px #fff, 724px 553px #fff, 1136px 1312px #fff,
+    112px 440px #fff, 378px 289px #fff, 721px 117px #fff, 1440px 1955px #fff,
+    352px 1755px #fff, 684px 945px #fff, 1853px 1959px #fff, 385px 1431px #fff,
+    1939px 1432px #fff, 1267px 1330px #fff, 1175px 1654px #fff,
+    1946px 1009px #fff, 221px 1237px #fff, 1042px 1808px #fff, 1088px 999px #fff,
+    654px 1639px #fff, 1672px 703px #fff, 86px 179px #fff, 1171px 33px #fff,
+    1585px 1691px #fff, 169px 1963px #fff, 520px 289px #fff, 1371px 50px #fff,
+    1040px 1278px #fff, 989px 344px #fff, 581px 1603px #fff, 102px 1663px #fff,
+    204px 179px #fff, 1059px 1114px #fff, 1450px 1525px #fff, 1966px 1067px #fff,
+    464px 1749px #fff, 538px 1326px #fff, 723px 1076px #fff, 1007px 885px #fff,
+    1861px 956px #fff, 1773px 86px #fff, 212px 38px #fff, 1037px 1442px #fff,
+    1694px 686px #fff, 1803px 1863px #fff, 1536px 402px #fff, 124px 1981px #fff,
+    1197px 701px #fff, 1041px 74px #fff, 811px 708px #fff, 1830px 1889px #fff,
+    1938px 183px #fff, 1075px 1951px #fff, 18px 1151px #fff, 906px 1106px #fff,
+    953px 361px #fff, 1636px 823px #fff, 1857px 278px #fff, 1691px 1938px #fff,
+    1658px 1017px #fff, 1801px 1576px #fff, 1133px 134px #fff, 590px 119px #fff,
+    829px 67px #fff, 855px 518px #fff, 474px 170px #fff, 807px 246px #fff,
+    609px 1079px #fff, 1430px 1209px #fff, 1795px 96px #fff, 1090px 565px #fff,
+    236px 490px #fff, 1008px 457px #fff, 1826px 1951px #fff, 289px 1358px #fff,
+    1230px 411px #fff, 1457px 1818px #fff, 1184px 927px #fff, 1761px 1636px #fff,
+    71px 1382px #fff, 1797px 157px #fff, 1437px 741px #fff, 410px 285px #fff,
+    1928px 978px #fff, 44px 1407px #fff, 1624px 728px #fff, 399px 176px #fff,
+    731px 19px #fff, 566px 712px #fff, 1421px 48px #fff, 382px 1882px #fff,
+    1452px 1396px #fff, 1290px 1483px #fff, 1480px 332px #fff, 731px 1206px #fff,
+    1993px 1696px #fff, 1332px 1094px #fff, 1287px 261px #fff, 698px 1930px #fff,
+    683px 733px #fff, 1694px 1827px #fff, 265px 808px #fff, 152px 1538px #fff,
+    1455px 408px #fff, 1420px 803px #fff, 652px 80px #fff, 1px 882px #fff,
+    196px 495px #fff, 670px 436px #fff, 161px 1683px #fff, 1166px 169px #fff,
+    1360px 327px #fff, 149px 1793px #fff, 127px 710px #fff, 1050px 1305px #fff,
+    1426px 1548px #fff, 1745px 343px #fff, 761px 1900px #fff, 1267px 15px #fff,
+    504px 1950px #fff, 1579px 1388px #fff, 1373px 1146px #fff, 1230px 294px #fff,
+    713px 1175px #fff, 1747px 749px #fff, 548px 745px #fff, 32px 320px #fff,
+    1343px 425px #fff, 277px 1442px #fff, 734px 1856px #fff, 195px 1802px #fff,
+    1185px 1741px #fff, 1551px 1191px #fff, 339px 1584px #fff, 123px 419px #fff,
+    1443px 1594px #fff, 381px 1511px #fff, 1827px 1197px #fff, 897px 624px #fff,
+    499px 546px #fff, 1500px 217px #fff, 592px 1541px #fff, 1074px 3px #fff,
+    987px 1567px #fff, 141px 1120px #fff, 908px 1397px #fff, 13px 965px #fff,
+    54px 1118px #fff, 391px 1670px #fff, 1145px 74px #fff, 1939px 582px #fff,
+    1772px 834px #fff, 1153px 290px #fff, 954px 53px #fff, 1868px 509px #fff,
+    1394px 1717px #fff, 949px 1196px #fff, 1876px 775px #fff, 1670px 490px #fff,
+    1453px 605px #fff, 1770px 1396px #fff, 1851px 995px #fff, 211px 521px #fff,
+    827px 309px #fff, 474px 1005px #fff, 386px 1590px #fff, 1226px 1027px #fff,
+    968px 1866px #fff, 569px 807px #fff, 1843px 1781px #fff, 1278px 1546px #fff,
+    392px 1500px #fff, 1819px 166px #fff, 1418px 262px #fff, 8px 39px #fff,
+    584px 1253px #fff, 1353px 1347px #fff, 1311px 692px #fff, 723px 1340px #fff,
+    1236px 1385px #fff, 620px 762px #fff, 780px 1113px #fff, 731px 1548px #fff,
+    486px 1180px #fff, 1264px 963px #fff, 1489px 1170px #fff, 293px 1075px #fff,
+    519px 1296px #fff, 1588px 719px #fff, 442px 1094px #fff, 339px 1407px #fff,
+    987px 1678px #fff, 1065px 1664px #fff, 1574px 829px #fff, 462px 1646px #fff,
+    183px 822px #fff, 1550px 1078px #fff, 1169px 1214px #fff, 223px 10px #fff,
+    1387px 1467px #fff, 1650px 110px #fff, 1067px 1007px #fff, 20px 1806px #fff,
+    188px 1903px #fff, 1844px 233px #fff, 102px 886px #fff, 1575px 1861px #fff,
+    1769px 253px #fff, 219px 1956px #fff, 1770px 1198px #fff, 1137px 1352px #fff,
+    1076px 957px #fff, 994px 268px #fff, 1863px 1457px #fff, 844px 802px #fff,
+    342px 1891px #fff, 820px 800px #fff, 1881px 1413px #fff, 406px 1186px #fff,
+    176px 1372px #fff, 1539px 767px #fff, 1145px 410px #fff, 1397px 88px #fff,
+    931px 124px #fff, 731px 1988px #fff, 433px 50px #fff, 1240px 249px #fff,
+    848px 1352px #fff, 1191px 1885px #fff, 1399px 866px #fff, 1751px 263px #fff,
+    1344px 272px #fff, 1901px 1023px #fff, 1693px 1951px #fff,
+    1225px 1263px #fff, 1163px 1667px #fff, 1849px 536px #fff, 1207px 138px #fff,
+    1229px 1393px #fff, 1016px 411px #fff, 942px 505px #fff, 333px 636px #fff,
+    665px 671px #fff, 1102px 1062px #fff, 1360px 457px #fff, 457px 829px #fff,
+    1279px 1719px #fff, 786px 1463px #fff, 901px 960px #fff, 1155px 98px #fff,
+    1867px 187px #fff, 113px 483px #fff, 204px 673px #fff, 1921px 1699px #fff,
+    1404px 272px #fff, 271px 187px #fff, 413px 1714px #fff, 52px 748px #fff,
+    1582px 441px #fff, 1536px 1979px #fff, 1684px 1263px #fff, 311px 1151px #fff,
+    49px 1403px #fff, 619px 1157px #fff, 1670px 1596px #fff, 78px 1001px #fff,
+    1854px 1853px #fff, 1474px 1689px #fff, 642px 1016px #fff, 773px 1038px #fff,
+    435px 1898px #fff, 1619px 1485px #fff, 1138px 771px #fff, 1125px 1729px #fff,
+    139px 1085px #fff, 1254px 1135px #fff, 1125px 1559px #fff,
+    1617px 1407px #fff, 1134px 1055px #fff, 530px 1240px #fff, 432px 665px #fff,
+    327px 960px #fff, 1251px 1294px #fff, 415px 883px #fff, 814px 852px #fff,
+    684px 1950px #fff, 425px 998px #fff, 1062px 1640px #fff, 579px 226px #fff,
+    1399px 1678px #fff, 1206px 274px #fff, 752px 834px #fff, 56px 362px #fff,
+    1478px 1843px #fff, 117px 1114px #fff, 760px 828px #fff, 572px 443px #fff,
+    1429px 1541px #fff, 1909px 607px #fff, 705px 1618px #fff, 1997px 222px #fff,
+    654px 784px #fff, 1272px 608px #fff, 1109px 1367px #fff, 1643px 568px #fff,
+    261px 661px #fff, 24px 417px #fff, 243px 1230px #fff, 1671px 499px #fff,
+    739px 1571px #fff, 1463px 1006px #fff, 1580px 1280px #fff, 83px 1700px #fff,
+    587px 628px #fff, 1347px 1222px #fff, 1219px 1223px #fff, 1044px 1293px #fff,
+    754px 1702px #fff, 964px 1159px #fff, 99px 532px #fff, 1498px 350px #fff,
+    259px 442px #fff, 1839px 111px #fff, 696px 1656px #fff, 1427px 1109px #fff,
+    1958px 1451px #fff, 1620px 1197px #fff, 1581px 1733px #fff,
+    1894px 1362px #fff, 121px 460px #fff, 1447px 1426px #fff, 630px 1246px #fff,
+    1262px 1754px #fff, 720px 217px #fff, 462px 810px #fff, 83px 679px #fff,
+    1491px 195px #fff, 668px 656px #fff, 1998px 81px #fff, 1329px 1136px #fff,
+    1172px 282px #fff, 593px 1016px #fff, 1324px 73px #fff, 924px 450px #fff,
+    211px 1026px #fff, 1851px 321px #fff, 1381px 1px #fff, 341px 1250px #fff,
+    1966px 1634px #fff, 1071px 936px #fff, 1173px 1494px #fff, 27px 1776px #fff,
+    183px 1031px #fff, 1711px 1019px #fff, 1391px 1240px #fff,
+    1415px 1007px #fff, 781px 563px #fff, 1428px 782px #fff, 715px 1019px #fff,
+    1940px 1978px #fff, 1580px 1315px #fff, 1257px 111px #fff, 435px 1126px #fff,
+    1567px 298px #fff, 1853px 702px #fff, 1565px 332px #fff, 889px 675px #fff,
+    1665px 1852px #fff, 749px 1526px #fff, 296px 1530px #fff, 437px 1575px #fff,
+    802px 986px #fff, 818px 584px #fff, 1165px 1750px #fff, 401px 227px #fff,
+    150px 871px #fff, 536px 1119px #fff, 47px 808px #fff, 1679px 21px #fff,
+    857px 498px #fff, 201px 1456px #fff, 294px 1555px #fff, 587px 983px #fff,
+    1781px 786px #fff, 1692px 736px #fff, 1509px 136px #fff, 1066px 641px #fff,
+    1334px 1474px #fff, 505px 367px #fff, 239px 1576px #fff, 1169px 1551px #fff,
+    458px 1585px #fff, 1602px 842px #fff, 1308px 1046px #fff, 1556px 1297px #fff,
+    1253px 672px #fff, 1815px 1662px #fff, 143px 752px #fff, 669px 204px #fff,
+    1405px 773px #fff, 97px 351px #fff, 727px 220px #fff, 853px 475px #fff,
+    1894px 1261px #fff, 956px 1203px #fff, 1775px 378px #fff, 787px 1187px #fff,
+    1031px 896px #fff, 1607px 319px #fff, 1505px 1440px #fff, 1209px 255px #fff,
+    1461px 1526px #fff, 326px 870px #fff, 1610px 686px #fff, 661px 1845px #fff,
+    1440px 113px #fff, 63px 700px #fff, 1974px 1608px #fff, 1475px 1476px #fff,
+    1818px 1480px #fff, 1730px 373px #fff, 1394px 1569px #fff,
+    1503px 1101px #fff, 1237px 1963px #fff, 1236px 977px #fff, 452px 1811px #fff,
+    2px 420px #fff, 612px 1781px #fff, 74px 377px #fff, 182px 427px #fff,
+    1515px 1471px #fff, 1238px 1662px #fff, 1020px 791px #fff, 266px 414px #fff,
+    1589px 200px #fff, 103px 1259px #fff, 1029px 1769px #fff, 1226px 278px #fff,
+    1639px 698px #fff, 163px 178px #fff, 736px 253px #fff, 1177px 1512px #fff,
+    320px 260px #fff, 929px 1057px #fff, 617px 196px #fff, 1371px 1216px #fff,
+    1067px 1382px #fff, 642px 527px #fff, 235px 606px #fff, 162px 793px #fff,
+    78px 1564px #fff, 1209px 954px #fff, 1793px 1714px #fff, 1869px 500px #fff,
+    1745px 174px #fff, 1972px 502px #fff, 1952px 829px #fff, 1236px 1650px #fff,
+    347px 169px #fff, 1699px 1526px #fff, 944px 707px #fff, 1299px 1372px #fff,
+    68px 720px #fff, 1046px 1309px #fff, 1141px 584px #fff, 1905px 620px #fff,
+    1788px 519px #fff;
+  animation: animStar 50s linear infinite;
+}
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 950px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 389px 553px #fff, 1190px 211px #fff, 425px 1678px #fff,
+    149px 1840px #fff, 1129px 577px #fff, 1428px 361px #fff, 696px 574px #fff,
+    15px 1665px #fff, 1616px 664px #fff, 426px 1927px #fff, 807px 1382px #fff,
+    888px 1511px #fff, 535px 1332px #fff, 183px 784px #fff, 327px 102px #fff,
+    1613px 546px #fff, 956px 1195px #fff, 1661px 1345px #fff, 1143px 521px #fff,
+    1465px 1900px #fff, 248px 270px #fff, 1410px 1655px #fff, 936px 205px #fff,
+    1485px 32px #fff, 675px 407px #fff, 827px 999px #fff, 1582px 1576px #fff,
+    419px 1330px #fff, 1888px 1561px #fff, 378px 633px #fff, 450px 192px #fff,
+    525px 1480px #fff, 858px 1641px #fff, 378px 108px #fff, 536px 900px #fff,
+    1178px 693px #fff, 551px 35px #fff, 3px 1352px #fff, 590px 245px #fff,
+    186px 1398px #fff, 1567px 1013px #fff, 1807px 1976px #fff,
+    1262px 1989px #fff, 886px 426px #fff, 546px 1316px #fff, 694px 1840px #fff,
+    281px 774px #fff, 542px 873px #fff, 455px 80px #fff, 1737px 690px #fff,
+    579px 964px #fff, 217px 269px #fff, 821px 1225px #fff, 1935px 492px #fff,
+    1802px 173px #fff, 620px 1906px #fff, 882px 1358px #fff, 1075px 361px #fff,
+    1851px 1584px #fff, 1073px 1661px #fff, 1511px 313px #fff, 1494px 212px #fff,
+    263px 380px #fff, 363px 917px #fff, 244px 1670px #fff, 396px 1734px #fff,
+    1650px 610px #fff, 1679px 370px #fff, 1812px 1187px #fff, 587px 1591px #fff,
+    405px 219px #fff, 711px 3px #fff, 348px 1045px #fff, 176px 630px #fff,
+    340px 1297px #fff, 1014px 1521px #fff, 1495px 569px #fff, 994px 234px #fff,
+    1911px 1706px #fff, 1043px 1086px #fff, 2px 153px #fff, 826px 888px #fff,
+    1837px 999px #fff, 86px 1336px #fff, 140px 938px #fff, 348px 980px #fff,
+    620px 1740px #fff, 725px 595px #fff, 1336px 641px #fff, 54px 393px #fff,
+    364px 1579px #fff, 782px 774px #fff, 497px 673px #fff, 1164px 468px #fff,
+    860px 162px #fff, 828px 1192px #fff, 1806px 674px #fff, 1329px 507px #fff,
+    193px 292px #fff, 1670px 957px #fff, 1547px 334px #fff, 1750px 1748px #fff,
+    971px 514px #fff, 1212px 622px #fff, 596px 1102px #fff, 272px 1410px #fff,
+    1759px 899px #fff, 500px 82px #fff, 1753px 1693px #fff, 25px 585px #fff,
+    139px 1669px #fff, 1641px 27px #fff, 1331px 720px #fff, 441px 660px #fff,
+    202px 1785px #fff, 1011px 1519px #fff, 1555px 623px #fff, 1470px 543px #fff,
+    915px 1253px #fff, 1244px 1814px #fff, 360px 169px #fff, 207px 641px #fff,
+    800px 1753px #fff, 1577px 1826px #fff, 1755px 1205px #fff, 1423px 403px #fff,
+    389px 587px #fff, 344px 37px #fff, 223px 615px #fff, 831px 1901px #fff,
+    945px 1762px #fff, 1335px 1057px #fff, 1321px 1305px #fff,
+    1229px 1507px #fff, 699px 639px #fff, 1307px 785px #fff, 1306px 936px #fff,
+    854px 1469px #fff, 1756px 1688px #fff, 657px 790px #fff, 1704px 585px #fff,
+    1863px 461px #fff, 1387px 813px #fff, 258px 1845px #fff, 1726px 703px #fff,
+    185px 1344px #fff, 1246px 1842px #fff, 1477px 317px #fff, 718px 164px #fff,
+    608px 441px #fff, 1593px 1247px #fff, 590px 516px #fff, 1316px 1080px #fff,
+    1115px 1531px #fff, 902px 1673px #fff, 1401px 46px #fff, 1946px 1438px #fff,
+    728px 1396px #fff, 1923px 1663px #fff, 1573px 1697px #fff, 1421px 193px #fff,
+    1589px 53px #fff, 124px 1141px #fff, 1022px 1420px #fff, 1101px 921px #fff,
+    1775px 1146px #fff, 1667px 846px #fff, 753px 1457px #fff, 1015px 290px #fff,
+    1865px 1275px #fff, 1854px 1707px #fff, 1843px 984px #fff, 407px 1695px #fff,
+    1868px 1124px #fff, 1347px 621px #fff, 721px 1082px #fff, 1496px 977px #fff,
+    1852px 1504px #fff, 1818px 560px #fff, 365px 410px #fff, 1649px 364px #fff,
+    169px 1514px #fff, 1916px 626px #fff, 1996px 1230px #fff, 1800px 1275px #fff,
+    1210px 966px #fff, 1772px 1519px #fff, 209px 736px #fff, 593px 155px #fff,
+    1472px 62px #fff, 893px 120px #fff, 1248px 911px #fff, 1679px 569px #fff,
+    1948px 368px #fff, 266px 1671px #fff, 171px 912px #fff, 1706px 1857px #fff,
+    202px 109px #fff, 251px 309px #fff, 1659px 125px #fff, 309px 1649px #fff,
+    1011px 586px #fff, 1738px 1031px #fff, 192px 1417px #fff, 826px 1494px #fff,
+    806px 140px #fff, 1059px 314px #fff, 1167px 1093px #fff, 1736px 1002px #fff,
+    929px 953px #fff, 1624px 95px #fff, 965px 1523px #fff, 631px 1273px #fff,
+    629px 288px #fff, 1036px 841px #fff, 148px 256px #fff, 1435px 456px #fff,
+    1287px 1825px #fff, 561px 170px #fff, 355px 1217px #fff, 587px 1401px #fff,
+    1818px 1127px #fff, 535px 1085px #fff, 1373px 1154px #fff, 1990px 234px #fff,
+    1232px 1351px #fff, 591px 841px #fff, 1675px 390px #fff, 1170px 842px #fff,
+    931px 706px #fff, 1091px 1954px #fff, 833px 499px #fff, 1026px 379px #fff,
+    1686px 1247px #fff, 629px 535px #fff, 724px 553px #fff, 1136px 1312px #fff,
+    112px 440px #fff, 378px 289px #fff, 721px 117px #fff, 1440px 1955px #fff,
+    352px 1755px #fff, 684px 945px #fff, 1853px 1959px #fff, 385px 1431px #fff,
+    1939px 1432px #fff, 1267px 1330px #fff, 1175px 1654px #fff,
+    1946px 1009px #fff, 221px 1237px #fff, 1042px 1808px #fff, 1088px 999px #fff,
+    654px 1639px #fff, 1672px 703px #fff, 86px 179px #fff, 1171px 33px #fff,
+    1585px 1691px #fff, 169px 1963px #fff, 520px 289px #fff, 1371px 50px #fff,
+    1040px 1278px #fff, 989px 344px #fff, 581px 1603px #fff, 102px 1663px #fff,
+    204px 179px #fff, 1059px 1114px #fff, 1450px 1525px #fff, 1966px 1067px #fff,
+    464px 1749px #fff, 538px 1326px #fff, 723px 1076px #fff, 1007px 885px #fff,
+    1861px 956px #fff, 1773px 86px #fff, 212px 38px #fff, 1037px 1442px #fff,
+    1694px 686px #fff, 1803px 1863px #fff, 1536px 402px #fff, 124px 1981px #fff,
+    1197px 701px #fff, 1041px 74px #fff, 811px 708px #fff, 1830px 1889px #fff,
+    1938px 183px #fff, 1075px 1951px #fff, 18px 1151px #fff, 906px 1106px #fff,
+    953px 361px #fff, 1636px 823px #fff, 1857px 278px #fff, 1691px 1938px #fff,
+    1658px 1017px #fff, 1801px 1576px #fff, 1133px 134px #fff, 590px 119px #fff,
+    829px 67px #fff, 855px 518px #fff, 474px 170px #fff, 807px 246px #fff,
+    609px 1079px #fff, 1430px 1209px #fff, 1795px 96px #fff, 1090px 565px #fff,
+    236px 490px #fff, 1008px 457px #fff, 1826px 1951px #fff, 289px 1358px #fff,
+    1230px 411px #fff, 1457px 1818px #fff, 1184px 927px #fff, 1761px 1636px #fff,
+    71px 1382px #fff, 1797px 157px #fff, 1437px 741px #fff, 410px 285px #fff,
+    1928px 978px #fff, 44px 1407px #fff, 1624px 728px #fff, 399px 176px #fff,
+    731px 19px #fff, 566px 712px #fff, 1421px 48px #fff, 382px 1882px #fff,
+    1452px 1396px #fff, 1290px 1483px #fff, 1480px 332px #fff, 731px 1206px #fff,
+    1993px 1696px #fff, 1332px 1094px #fff, 1287px 261px #fff, 698px 1930px #fff,
+    683px 733px #fff, 1694px 1827px #fff, 265px 808px #fff, 152px 1538px #fff,
+    1455px 408px #fff, 1420px 803px #fff, 652px 80px #fff, 1px 882px #fff,
+    196px 495px #fff, 670px 436px #fff, 161px 1683px #fff, 1166px 169px #fff,
+    1360px 327px #fff, 149px 1793px #fff, 127px 710px #fff, 1050px 1305px #fff,
+    1426px 1548px #fff, 1745px 343px #fff, 761px 1900px #fff, 1267px 15px #fff,
+    504px 1950px #fff, 1579px 1388px #fff, 1373px 1146px #fff, 1230px 294px #fff,
+    713px 1175px #fff, 1747px 749px #fff, 548px 745px #fff, 32px 320px #fff,
+    1343px 425px #fff, 277px 1442px #fff, 734px 1856px #fff, 195px 1802px #fff,
+    1185px 1741px #fff, 1551px 1191px #fff, 339px 1584px #fff, 123px 419px #fff,
+    1443px 1594px #fff, 381px 1511px #fff, 1827px 1197px #fff, 897px 624px #fff,
+    499px 546px #fff, 1500px 217px #fff, 592px 1541px #fff, 1074px 3px #fff,
+    987px 1567px #fff, 141px 1120px #fff, 908px 1397px #fff, 13px 965px #fff,
+    54px 1118px #fff, 391px 1670px #fff, 1145px 74px #fff, 1939px 582px #fff,
+    1772px 834px #fff, 1153px 290px #fff, 954px 53px #fff, 1868px 509px #fff,
+    1394px 1717px #fff, 949px 1196px #fff, 1876px 775px #fff, 1670px 490px #fff,
+    1453px 605px #fff, 1770px 1396px #fff, 1851px 995px #fff, 211px 521px #fff,
+    827px 309px #fff, 474px 1005px #fff, 386px 1590px #fff, 1226px 1027px #fff,
+    968px 1866px #fff, 569px 807px #fff, 1843px 1781px #fff, 1278px 1546px #fff,
+    392px 1500px #fff, 1819px 166px #fff, 1418px 262px #fff, 8px 39px #fff,
+    584px 1253px #fff, 1353px 1347px #fff, 1311px 692px #fff, 723px 1340px #fff,
+    1236px 1385px #fff, 620px 762px #fff, 780px 1113px #fff, 731px 1548px #fff,
+    486px 1180px #fff, 1264px 963px #fff, 1489px 1170px #fff, 293px 1075px #fff,
+    519px 1296px #fff, 1588px 719px #fff, 442px 1094px #fff, 339px 1407px #fff,
+    987px 1678px #fff, 1065px 1664px #fff, 1574px 829px #fff, 462px 1646px #fff,
+    183px 822px #fff, 1550px 1078px #fff, 1169px 1214px #fff, 223px 10px #fff,
+    1387px 1467px #fff, 1650px 110px #fff, 1067px 1007px #fff, 20px 1806px #fff,
+    188px 1903px #fff, 1844px 233px #fff, 102px 886px #fff, 1575px 1861px #fff,
+    1769px 253px #fff, 219px 1956px #fff, 1770px 1198px #fff, 1137px 1352px #fff,
+    1076px 957px #fff, 994px 268px #fff, 1863px 1457px #fff, 844px 802px #fff,
+    342px 1891px #fff, 820px 800px #fff, 1881px 1413px #fff, 406px 1186px #fff,
+    176px 1372px #fff, 1539px 767px #fff, 1145px 410px #fff, 1397px 88px #fff,
+    931px 124px #fff, 731px 1988px #fff, 433px 50px #fff, 1240px 249px #fff,
+    848px 1352px #fff, 1191px 1885px #fff, 1399px 866px #fff, 1751px 263px #fff,
+    1344px 272px #fff, 1901px 1023px #fff, 1693px 1951px #fff,
+    1225px 1263px #fff, 1163px 1667px #fff, 1849px 536px #fff, 1207px 138px #fff,
+    1229px 1393px #fff, 1016px 411px #fff, 942px 505px #fff, 333px 636px #fff,
+    665px 671px #fff, 1102px 1062px #fff, 1360px 457px #fff, 457px 829px #fff,
+    1279px 1719px #fff, 786px 1463px #fff, 901px 960px #fff, 1155px 98px #fff,
+    1867px 187px #fff, 113px 483px #fff, 204px 673px #fff, 1921px 1699px #fff,
+    1404px 272px #fff, 271px 187px #fff, 413px 1714px #fff, 52px 748px #fff,
+    1582px 441px #fff, 1536px 1979px #fff, 1684px 1263px #fff, 311px 1151px #fff,
+    49px 1403px #fff, 619px 1157px #fff, 1670px 1596px #fff, 78px 1001px #fff,
+    1854px 1853px #fff, 1474px 1689px #fff, 642px 1016px #fff, 773px 1038px #fff,
+    435px 1898px #fff, 1619px 1485px #fff, 1138px 771px #fff, 1125px 1729px #fff,
+    139px 1085px #fff, 1254px 1135px #fff, 1125px 1559px #fff,
+    1617px 1407px #fff, 1134px 1055px #fff, 530px 1240px #fff, 432px 665px #fff,
+    327px 960px #fff, 1251px 1294px #fff, 415px 883px #fff, 814px 852px #fff,
+    684px 1950px #fff, 425px 998px #fff, 1062px 1640px #fff, 579px 226px #fff,
+    1399px 1678px #fff, 1206px 274px #fff, 752px 834px #fff, 56px 362px #fff,
+    1478px 1843px #fff, 117px 1114px #fff, 760px 828px #fff, 572px 443px #fff,
+    1429px 1541px #fff, 1909px 607px #fff, 705px 1618px #fff, 1997px 222px #fff,
+    654px 784px #fff, 1272px 608px #fff, 1109px 1367px #fff, 1643px 568px #fff,
+    261px 661px #fff, 24px 417px #fff, 243px 1230px #fff, 1671px 499px #fff,
+    739px 1571px #fff, 1463px 1006px #fff, 1580px 1280px #fff, 83px 1700px #fff,
+    587px 628px #fff, 1347px 1222px #fff, 1219px 1223px #fff, 1044px 1293px #fff,
+    754px 1702px #fff, 964px 1159px #fff, 99px 532px #fff, 1498px 350px #fff,
+    259px 442px #fff, 1839px 111px #fff, 696px 1656px #fff, 1427px 1109px #fff,
+    1958px 1451px #fff, 1620px 1197px #fff, 1581px 1733px #fff,
+    1894px 1362px #fff, 121px 460px #fff, 1447px 1426px #fff, 630px 1246px #fff,
+    1262px 1754px #fff, 720px 217px #fff, 462px 810px #fff, 83px 679px #fff,
+    1491px 195px #fff, 668px 656px #fff, 1998px 81px #fff, 1329px 1136px #fff,
+    1172px 282px #fff, 593px 1016px #fff, 1324px 73px #fff, 924px 450px #fff,
+    211px 1026px #fff, 1851px 321px #fff, 1381px 1px #fff, 341px 1250px #fff,
+    1966px 1634px #fff, 1071px 936px #fff, 1173px 1494px #fff, 27px 1776px #fff,
+    183px 1031px #fff, 1711px 1019px #fff, 1391px 1240px #fff,
+    1415px 1007px #fff, 781px 563px #fff, 1428px 782px #fff, 715px 1019px #fff,
+    1940px 1978px #fff, 1580px 1315px #fff, 1257px 111px #fff, 435px 1126px #fff,
+    1567px 298px #fff, 1853px 702px #fff, 1565px 332px #fff, 889px 675px #fff,
+    1665px 1852px #fff, 749px 1526px #fff, 296px 1530px #fff, 437px 1575px #fff,
+    802px 986px #fff, 818px 584px #fff, 1165px 1750px #fff, 401px 227px #fff,
+    150px 871px #fff, 536px 1119px #fff, 47px 808px #fff, 1679px 21px #fff,
+    857px 498px #fff, 201px 1456px #fff, 294px 1555px #fff, 587px 983px #fff,
+    1781px 786px #fff, 1692px 736px #fff, 1509px 136px #fff, 1066px 641px #fff,
+    1334px 1474px #fff, 505px 367px #fff, 239px 1576px #fff, 1169px 1551px #fff,
+    458px 1585px #fff, 1602px 842px #fff, 1308px 1046px #fff, 1556px 1297px #fff,
+    1253px 672px #fff, 1815px 1662px #fff, 143px 752px #fff, 669px 204px #fff,
+    1405px 773px #fff, 97px 351px #fff, 727px 220px #fff, 853px 475px #fff,
+    1894px 1261px #fff, 956px 1203px #fff, 1775px 378px #fff, 787px 1187px #fff,
+    1031px 896px #fff, 1607px 319px #fff, 1505px 1440px #fff, 1209px 255px #fff,
+    1461px 1526px #fff, 326px 870px #fff, 1610px 686px #fff, 661px 1845px #fff,
+    1440px 113px #fff, 63px 700px #fff, 1974px 1608px #fff, 1475px 1476px #fff,
+    1818px 1480px #fff, 1730px 373px #fff, 1394px 1569px #fff,
+    1503px 1101px #fff, 1237px 1963px #fff, 1236px 977px #fff, 452px 1811px #fff,
+    2px 420px #fff, 612px 1781px #fff, 74px 377px #fff, 182px 427px #fff,
+    1515px 1471px #fff, 1238px 1662px #fff, 1020px 791px #fff, 266px 414px #fff,
+    1589px 200px #fff, 103px 1259px #fff, 1029px 1769px #fff, 1226px 278px #fff,
+    1639px 698px #fff, 163px 178px #fff, 736px 253px #fff, 1177px 1512px #fff,
+    320px 260px #fff, 929px 1057px #fff, 617px 196px #fff, 1371px 1216px #fff,
+    1067px 1382px #fff, 642px 527px #fff, 235px 606px #fff, 162px 793px #fff,
+    78px 1564px #fff, 1209px 954px #fff, 1793px 1714px #fff, 1869px 500px #fff,
+    1745px 174px #fff, 1972px 502px #fff, 1952px 829px #fff, 1236px 1650px #fff,
+    347px 169px #fff, 1699px 1526px #fff, 944px 707px #fff, 1299px 1372px #fff,
+    68px 720px #fff, 1046px 1309px #fff, 1141px 584px #fff, 1905px 620px #fff,
+    1788px 519px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 731px 1362px #fff, 1172px 1793px #fff, 647px 1641px #fff,
+    199px 912px #fff, 383px 39px #fff, 1667px 578px #fff, 684px 1846px #fff,
+    1110px 422px #fff, 520px 1085px #fff, 274px 1855px #fff, 1324px 1901px #fff,
+    21px 1582px #fff, 1238px 1223px #fff, 318px 857px #fff, 515px 610px #fff,
+    177px 474px #fff, 483px 396px #fff, 1765px 1824px #fff, 222px 393px #fff,
+    1769px 191px #fff, 1319px 899px #fff, 303px 1664px #fff, 1306px 1759px #fff,
+    1904px 1796px #fff, 743px 868px #fff, 495px 135px #fff, 1139px 695px #fff,
+    642px 1763px #fff, 1464px 455px #fff, 1267px 1302px #fff, 97px 2000px #fff,
+    1144px 1242px #fff, 962px 493px #fff, 655px 1114px #fff, 633px 278px #fff,
+    1801px 1065px #fff, 781px 1598px #fff, 1973px 404px #fff, 1915px 12px #fff,
+    161px 272px #fff, 295px 564px #fff, 1710px 1174px #fff, 54px 523px #fff,
+    1695px 823px #fff, 379px 1950px #fff, 1274px 1945px #fff, 733px 1296px #fff,
+    1476px 334px #fff, 100px 318px #fff, 535px 310px #fff, 862px 1087px #fff,
+    511px 1036px #fff, 572px 69px #fff, 241px 1429px #fff, 1033px 599px #fff,
+    1543px 1419px #fff, 1262px 243px #fff, 1588px 1633px #fff, 645px 1683px #fff,
+    130px 1484px #fff, 1825px 508px #fff, 1908px 1109px #fff, 1201px 612px #fff,
+    445px 1056px #fff, 497px 1132px #fff, 853px 702px #fff, 1637px 850px #fff,
+    137px 349px #fff, 428px 751px #fff, 1315px 960px #fff, 903px 1245px #fff,
+    1905px 1614px #fff, 845px 282px #fff, 402px 1913px #fff, 32px 891px #fff,
+    694px 1524px #fff, 327px 1898px #fff, 1001px 1576px #fff, 1005px 231px #fff,
+    1294px 1063px #fff, 1068px 1602px #fff, 1130px 1729px #fff,
+    1457px 380px #fff, 575px 1725px #fff, 1986px 1654px #fff, 298px 469px #fff,
+    1888px 419px #fff, 1700px 1969px #fff, 179px 276px #fff, 836px 826px #fff,
+    1483px 1437px #fff, 264px 1306px #fff, 1862px 441px #fff, 95px 1311px #fff,
+    1211px 370px #fff, 32px 1569px #fff, 709px 1035px #fff, 1076px 1521px #fff,
+    951px 1709px #fff, 364px 42px #fff, 646px 1594px #fff, 524px 902px #fff,
+    883px 1900px #fff, 1609px 265px #fff, 479px 1747px #fff, 1245px 746px #fff,
+    1809px 227px #fff, 1312px 910px #fff, 765px 1525px #fff, 408px 1248px #fff,
+    321px 130px #fff, 1448px 1367px #fff, 1254px 1665px #fff, 167px 1755px #fff,
+    1250px 1767px #fff, 1797px 600px #fff, 908px 571px #fff, 432px 6px #fff,
+    970px 173px #fff, 1962px 1783px #fff, 1455px 371px #fff, 1978px 936px #fff,
+    894px 416px #fff, 1042px 815px #fff, 584px 1410px #fff, 1406px 403px #fff,
+    1810px 1045px #fff, 511px 287px #fff, 113px 973px #fff, 1865px 1861px #fff,
+    1705px 34px #fff, 1467px 1521px #fff, 1867px 1546px #fff, 399px 945px #fff,
+    1953px 1023px #fff, 219px 109px #fff, 1520px 1108px #fff, 558px 1260px #fff,
+    1264px 556px #fff, 910px 762px #fff, 38px 1276px #fff, 1339px 1087px #fff,
+    1239px 34px #fff, 759px 1582px #fff, 572px 176px #fff, 1080px 1528px #fff,
+    1602px 1222px #fff, 1999px 1125px #fff, 825px 256px #fff, 1884px 229px #fff,
+    1678px 376px #fff, 279px 1337px #fff, 1719px 61px #fff, 506px 1589px #fff,
+    1456px 1778px #fff, 1299px 1149px #fff, 38px 1825px #fff, 245px 241px #fff,
+    1352px 503px #fff, 1605px 959px #fff, 36px 1814px #fff, 1540px 746px #fff,
+    1054px 184px #fff, 1598px 777px #fff, 1150px 1210px #fff, 1903px 113px #fff,
+    1319px 629px #fff, 734px 1540px #fff, 1926px 1659px #fff, 545px 1224px #fff,
+    1802px 115px #fff, 758px 1969px #fff, 363px 1662px #fff, 1578px 1571px #fff,
+    317px 114px #fff, 268px 565px #fff, 675px 1579px #fff, 1397px 108px #fff,
+    1944px 918px #fff, 1975px 1143px #fff, 1px 203px #fff, 1926px 1155px #fff,
+    1239px 648px #fff, 946px 561px #fff, 1895px 1643px #fff, 1209px 1792px #fff,
+    1961px 857px #fff, 1057px 463px #fff, 790px 1023px #fff, 1553px 1243px #fff,
+    1037px 1031px #fff, 73px 1508px #fff, 1881px 851px #fff, 1473px 1339px #fff,
+    1643px 799px #fff, 1992px 425px #fff, 689px 1352px #fff, 307px 1953px #fff,
+    1956px 1490px #fff, 1937px 491px #fff;
+  animation: animStar 100s linear infinite;
+}
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 950px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 731px 1362px #fff, 1172px 1793px #fff, 647px 1641px #fff,
+    199px 912px #fff, 383px 39px #fff, 1667px 578px #fff, 684px 1846px #fff,
+    1110px 422px #fff, 520px 1085px #fff, 274px 1855px #fff, 1324px 1901px #fff,
+    21px 1582px #fff, 1238px 1223px #fff, 318px 857px #fff, 515px 610px #fff,
+    177px 474px #fff, 483px 396px #fff, 1765px 1824px #fff, 222px 393px #fff,
+    1769px 191px #fff, 1319px 899px #fff, 303px 1664px #fff, 1306px 1759px #fff,
+    1904px 1796px #fff, 743px 868px #fff, 495px 135px #fff, 1139px 695px #fff,
+    642px 1763px #fff, 1464px 455px #fff, 1267px 1302px #fff, 97px 2000px #fff,
+    1144px 1242px #fff, 962px 493px #fff, 655px 1114px #fff, 633px 278px #fff,
+    1801px 1065px #fff, 781px 1598px #fff, 1973px 404px #fff, 1915px 12px #fff,
+    161px 272px #fff, 295px 564px #fff, 1710px 1174px #fff, 54px 523px #fff,
+    1695px 823px #fff, 379px 1950px #fff, 1274px 1945px #fff, 733px 1296px #fff,
+    1476px 334px #fff, 100px 318px #fff, 535px 310px #fff, 862px 1087px #fff,
+    511px 1036px #fff, 572px 69px #fff, 241px 1429px #fff, 1033px 599px #fff,
+    1543px 1419px #fff, 1262px 243px #fff, 1588px 1633px #fff, 645px 1683px #fff,
+    130px 1484px #fff, 1825px 508px #fff, 1908px 1109px #fff, 1201px 612px #fff,
+    445px 1056px #fff, 497px 1132px #fff, 853px 702px #fff, 1637px 850px #fff,
+    137px 349px #fff, 428px 751px #fff, 1315px 960px #fff, 903px 1245px #fff,
+    1905px 1614px #fff, 845px 282px #fff, 402px 1913px #fff, 32px 891px #fff,
+    694px 1524px #fff, 327px 1898px #fff, 1001px 1576px #fff, 1005px 231px #fff,
+    1294px 1063px #fff, 1068px 1602px #fff, 1130px 1729px #fff,
+    1457px 380px #fff, 575px 1725px #fff, 1986px 1654px #fff, 298px 469px #fff,
+    1888px 419px #fff, 1700px 1969px #fff, 179px 276px #fff, 836px 826px #fff,
+    1483px 1437px #fff, 264px 1306px #fff, 1862px 441px #fff, 95px 1311px #fff,
+    1211px 370px #fff, 32px 1569px #fff, 709px 1035px #fff, 1076px 1521px #fff,
+    951px 1709px #fff, 364px 42px #fff, 646px 1594px #fff, 524px 902px #fff,
+    883px 1900px #fff, 1609px 265px #fff, 479px 1747px #fff, 1245px 746px #fff,
+    1809px 227px #fff, 1312px 910px #fff, 765px 1525px #fff, 408px 1248px #fff,
+    321px 130px #fff, 1448px 1367px #fff, 1254px 1665px #fff, 167px 1755px #fff,
+    1250px 1767px #fff, 1797px 600px #fff, 908px 571px #fff, 432px 6px #fff,
+    970px 173px #fff, 1962px 1783px #fff, 1455px 371px #fff, 1978px 936px #fff,
+    894px 416px #fff, 1042px 815px #fff, 584px 1410px #fff, 1406px 403px #fff,
+    1810px 1045px #fff, 511px 287px #fff, 113px 973px #fff, 1865px 1861px #fff,
+    1705px 34px #fff, 1467px 1521px #fff, 1867px 1546px #fff, 399px 945px #fff,
+    1953px 1023px #fff, 219px 109px #fff, 1520px 1108px #fff, 558px 1260px #fff,
+    1264px 556px #fff, 910px 762px #fff, 38px 1276px #fff, 1339px 1087px #fff,
+    1239px 34px #fff, 759px 1582px #fff, 572px 176px #fff, 1080px 1528px #fff,
+    1602px 1222px #fff, 1999px 1125px #fff, 825px 256px #fff, 1884px 229px #fff,
+    1678px 376px #fff, 279px 1337px #fff, 1719px 61px #fff, 506px 1589px #fff,
+    1456px 1778px #fff, 1299px 1149px #fff, 38px 1825px #fff, 245px 241px #fff,
+    1352px 503px #fff, 1605px 959px #fff, 36px 1814px #fff, 1540px 746px #fff,
+    1054px 184px #fff, 1598px 777px #fff, 1150px 1210px #fff, 1903px 113px #fff,
+    1319px 629px #fff, 734px 1540px #fff, 1926px 1659px #fff, 545px 1224px #fff,
+    1802px 115px #fff, 758px 1969px #fff, 363px 1662px #fff, 1578px 1571px #fff,
+    317px 114px #fff, 268px 565px #fff, 675px 1579px #fff, 1397px 108px #fff,
+    1944px 918px #fff, 1975px 1143px #fff, 1px 203px #fff, 1926px 1155px #fff,
+    1239px 648px #fff, 946px 561px #fff, 1895px 1643px #fff, 1209px 1792px #fff,
+    1961px 857px #fff, 1057px 463px #fff, 790px 1023px #fff, 1553px 1243px #fff,
+    1037px 1031px #fff, 73px 1508px #fff, 1881px 851px #fff, 1473px 1339px #fff,
+    1643px 799px #fff, 1992px 425px #fff, 689px 1352px #fff, 307px 1953px #fff,
+    1956px 1490px #fff, 1937px 491px #fff;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1407px 55px #fff, 1260px 596px #fff, 1033px 113px #fff,
+    1206px 1071px #fff, 669px 920px #fff, 307px 35px #fff, 677px 1662px #fff,
+    203px 161px #fff, 479px 1806px #fff, 1038px 1688px #fff, 1038px 1644px #fff,
+    353px 1140px #fff, 1500px 912px #fff, 1444px 173px #fff, 1447px 1206px #fff,
+    816px 745px #fff, 1906px 1600px #fff, 1819px 1812px #fff, 740px 232px #fff,
+    722px 906px #fff, 1723px 1978px #fff, 1367px 1384px #fff, 1207px 337px #fff,
+    1560px 1932px #fff, 1929px 152px #fff, 831px 250px #fff, 851px 373px #fff,
+    1227px 668px #fff, 749px 1334px #fff, 631px 1297px #fff, 5px 262px #fff,
+    1746px 1538px #fff, 1345px 386px #fff, 1522px 1725px #fff, 1851px 589px #fff,
+    1136px 806px #fff, 1683px 1618px #fff, 1823px 1464px #fff,
+    1038px 1914px #fff, 417px 1626px #fff, 1213px 1505px #fff, 1562px 417px #fff,
+    654px 1394px #fff, 736px 1000px #fff, 1489px 1247px #fff, 823px 1130px #fff,
+    822px 20px #fff, 1521px 1224px #fff, 1983px 130px #fff, 145px 831px #fff,
+    11px 1735px #fff, 184px 948px #fff, 514px 1649px #fff, 991px 1631px #fff,
+    850px 1143px #fff, 366px 543px #fff, 1590px 1481px #fff, 28px 197px #fff,
+    600px 972px #fff, 981px 1347px #fff, 1123px 1851px #fff, 185px 656px #fff,
+    1173px 759px #fff, 1266px 781px #fff, 650px 22px #fff, 324px 470px #fff,
+    1099px 1501px #fff, 1647px 1688px #fff, 1040px 640px #fff,
+    1365px 1056px #fff, 497px 1341px #fff, 213px 1694px #fff, 775px 104px #fff,
+    1780px 1448px #fff, 1664px 955px #fff, 860px 469px #fff, 1788px 1447px #fff,
+    158px 1360px #fff, 1433px 804px #fff, 392px 482px #fff, 1818px 424px #fff,
+    474px 1674px #fff, 1417px 1654px #fff, 1119px 1678px #fff, 943px 429px #fff,
+    142px 1844px #fff, 1546px 1630px #fff, 403px 1238px #fff, 785px 691px #fff,
+    1927px 45px #fff, 856px 1821px #fff, 971px 15px #fff, 822px 799px #fff,
+    1140px 193px #fff, 2000px 1411px #fff, 528px 425px #fff, 509px 1389px #fff,
+    614px 696px #fff, 899px 1341px #fff, 865px 811px #fff;
+  animation: animStar 150s linear infinite;
+}
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 950px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1407px 55px #fff, 1260px 596px #fff, 1033px 113px #fff,
+    1206px 1071px #fff, 669px 920px #fff, 307px 35px #fff, 677px 1662px #fff,
+    203px 161px #fff, 479px 1806px #fff, 1038px 1688px #fff, 1038px 1644px #fff,
+    353px 1140px #fff, 1500px 912px #fff, 1444px 173px #fff, 1447px 1206px #fff,
+    816px 745px #fff, 1906px 1600px #fff, 1819px 1812px #fff, 740px 232px #fff,
+    722px 906px #fff, 1723px 1978px #fff, 1367px 1384px #fff, 1207px 337px #fff,
+    1560px 1932px #fff, 1929px 152px #fff, 831px 250px #fff, 851px 373px #fff,
+    1227px 668px #fff, 749px 1334px #fff, 631px 1297px #fff, 5px 262px #fff,
+    1746px 1538px #fff, 1345px 386px #fff, 1522px 1725px #fff, 1851px 589px #fff,
+    1136px 806px #fff, 1683px 1618px #fff, 1823px 1464px #fff,
+    1038px 1914px #fff, 417px 1626px #fff, 1213px 1505px #fff, 1562px 417px #fff,
+    654px 1394px #fff, 736px 1000px #fff, 1489px 1247px #fff, 823px 1130px #fff,
+    822px 20px #fff, 1521px 1224px #fff, 1983px 130px #fff, 145px 831px #fff,
+    11px 1735px #fff, 184px 948px #fff, 514px 1649px #fff, 991px 1631px #fff,
+    850px 1143px #fff, 366px 543px #fff, 1590px 1481px #fff, 28px 197px #fff,
+    600px 972px #fff, 981px 1347px #fff, 1123px 1851px #fff, 185px 656px #fff,
+    1173px 759px #fff, 1266px 781px #fff, 650px 22px #fff, 324px 470px #fff,
+    1099px 1501px #fff, 1647px 1688px #fff, 1040px 640px #fff,
+    1365px 1056px #fff, 497px 1341px #fff, 213px 1694px #fff, 775px 104px #fff,
+    1780px 1448px #fff, 1664px 955px #fff, 860px 469px #fff, 1788px 1447px #fff,
+    158px 1360px #fff, 1433px 804px #fff, 392px 482px #fff, 1818px 424px #fff,
+    474px 1674px #fff, 1417px 1654px #fff, 1119px 1678px #fff, 943px 429px #fff,
+    142px 1844px #fff, 1546px 1630px #fff, 403px 1238px #fff, 785px 691px #fff,
+    1927px 45px #fff, 856px 1821px #fff, 971px 15px #fff, 822px 799px #fff,
+    1140px 193px #fff, 2000px 1411px #fff, 528px 425px #fff, 509px 1389px #fff,
+    614px 696px #fff, 899px 1341px #fff, 865px 811px #fff;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(-950px);
+  }
+}
+/* background animation end*/
+
+/* media query css start */
+@media (max-width: 365px) {
+  body {
+    display: block;
+  }
+  h1 {
+    font-size: 40px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 10%;
+    right: 10%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 15px;
+    padding: 8px;
+  }
+  #time,
+  #diff {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  #time label,
+  #diff label {
+    padding: 2px;
+  }
+  header {
+    text-align: center;
+    font-size: 25px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 290px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    height: 150px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 18px;
+    margin-top: 180px;
+  }
+}
+@media screen and (max-width: 418px) and (min-width: 365px) {
+  body {
+    display: block;
+  }
+  h1 {
+    font-size: 40px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 10%;
+    right: 10%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 15px;
+    padding: 8px;
+  }
+  #time,
+  #diff {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  #time label,
+  #diff label {
+    padding: 2px;
+  }
+  header {
+    text-align: center;
+    font-size: 25px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 290px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 270px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 309px;
+    height: 300px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    height: 150px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 18px;
+    margin-top: 180px;
+  }
+}
+
+@media screen and (max-width: 441px) and (min-width: 418px) {
+  h1 {
+    font-size: 45px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+  #btns {
+    margin-right: -30px;
+  }
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 25%;
+    right: 30%;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 16px;
+    padding: 2px;
+  }
+  #time,
+  #diff {
+    font-size: 14px;
+    padding: 2px;
+  }
+  #time label,
+  #diff label {
+    font-size: 15px;
+  }
+  header {
+    text-align: center;
+    font-size: 35px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 375px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 330px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 31px;
+    height: 35px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 28px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 43px;
+    position: relative;
+    height: 280px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 30px;
+    height: 35px;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 20px;
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 497px) and (min-width: 441px) {
+  h1 {
+    font-size: 45px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+  #btns {
+    margin-right: -50px;
+  }
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 25%;
+    right: 30%;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 20px;
+    padding: 2px;
+  }
+  #time,
+  #diff {
+    font-size: 18px;
+    padding: 2px;
+  }
+  #time label,
+  #diff label {
+    font-size: 18px;
+    padding: 2px;
+  }
+  header {
+    text-align: center;
+    font-size: 35px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 375px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 380px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 399px;
+    height: 400px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 34px;
+    height: 35px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 30px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    height: 280px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 31px;
+    height: 35px;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 20px;
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 541px) and (min-width: 497px) {
+  h1 {
+    font-size: 45px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 25%;
+    right: 30%;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 20px;
+    padding-right: 2px;
+  }
+  #time,
+  #diff {
+    font-size: 18px;
+    padding: 2px;
+  }
+  #time label,
+  #diff label {
+    font-size: 18px;
+  }
+  header {
+    text-align: center;
+    font-size: 35px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 380px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 380px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 40px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    height: 280px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 20px;
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 541px) {
+  h1 {
+    font-size: 50px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+  #btns {
+    margin-left: 20px;
+  }
+  #solve-btn,
+  #start-btn {
+    width: 140px;
+    left: 25%;
+    right: 30%;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  #time p,
+  #diff p {
+    font-size: 20px;
+    padding: 2px;
+  }
+  #time,
+  #diff {
+    font-size: 18px;
+    padding: 2px;
+  }
+  #time label,
+  #diff label {
+    font-size: 18px;
+  }
+  header {
+    text-align: center;
+    font-size: 35px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 390px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 380px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 499px;
+    height: 500px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 44px;
+    height: 45px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 40px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    height: 280px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 45px;
+    height: 45px;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+    #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 280px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+ 
+  footer p {
+    font-size: 20px;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  h1 {
+    font-size: 50px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+  }
+
+  #btns {
+    margin-right: -80px;
+  }
+  #btns button {
+    width: 140px;
+    margin-right: 30px;
+    font-size: 16px;
+  }
+  #time p,
+  #diff p {
+    font-size: 22px;
+  }
+  #time,
+  #diff {
+    font-size: 18px;
+    padding-right: 1px;
+  }
+  #lable {
+    font-size: 20px;
+  }
+  header {
+    text-align: center;
+    font-size: 35px;
+  }
+  #loginWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 390px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* inputs in loginWindow will get this css */
+  #loginWindow input {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  /* css for error msg */
+  #login-error-msg-holder {
+    color: red;
+  }
+  /* login main css end */
+  /* css for our welcome window */
+  #welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 380px;
+    background-color: rgb(24, 9, 109, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  /* css for lives and time */
+  #stats {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #board {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    color: black;
+  }
+  /* in js file */
+  .tile {
+    border: 2px solid rgb(0, 1, 66);
+    opacity: 0.7;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 40px;
+    padding: 1px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #number-container {
+    width: 50px;
+    position: relative;
+    right: 35px;
+    height: 280px;
+  }
+  #number-container > p {
+    border: 2px solid rgb(0, 1, 66);
+    width: 48px;
+    height: 48px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 5px 5px 15px rgb(0, 140, 255);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+    opacity: 0.8;
+  }
+  /* css for loose */
+  #youLose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 320px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+  }
+  #gameOver {
+    font-size: 40px;
+    animation-name: gameOver;
+    animation: gameOver 0.6s infinite;
+  }
+  #youWin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 350px;
+    background-color: rgb(24, 9, 109, 0.95);
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 2px solid black;
+    font-size: 30px;
+    text-align: center;
+    color: green;
+  }
+  #youW {
+    font-size: 40px;
+    animation-name: youW;
+    animation: youW 0.6s infinite;
+  }
+
+  footer p {
+    font-size: 25px;
+    margin-top: 100px;
+  }
+}
+/* media query css end */
