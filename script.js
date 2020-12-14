@@ -123,7 +123,7 @@ function startGame() {
   id("youLose").classList.add("hidden");
   id("youWin").classList.add("hidden");
   id("stats").classList.remove("hidden");
-
+  id("solve-btn").style.display = 'inline';
   let board;
   //get random board
   rand = Math.floor(Math.random() * 4) + 1;

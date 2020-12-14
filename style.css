@@ -54,6 +54,9 @@ button:hover {
   width: 180px;
   margin-right: 10px;
 }
+#solve-btn{
+  display: none;
+}
 /* header css start*/
 header {
   text-align: center;
